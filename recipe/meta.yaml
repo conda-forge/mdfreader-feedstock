@@ -11,7 +11,7 @@ source:
   sha256: acf50cf2a03ddb7520fb753a813a0aa93d780a201462caf15ed280d44560f2a3
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - mdfconverter=mdfconverter.mdfconverter:main
   script: {{ PYTHON }} -m pip install . -vv
