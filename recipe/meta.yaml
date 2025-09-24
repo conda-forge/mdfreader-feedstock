@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdfreader-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mdfreader-{{ version }}.tar.gz
   sha256: acf50cf2a03ddb7520fb753a813a0aa93d780a201462caf15ed280d44560f2a3
 
 build:
-  number: 3
+  number: 4
   entry_points:
     - mdfconverter=mdfconverter.mdfconverter:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - numpy
